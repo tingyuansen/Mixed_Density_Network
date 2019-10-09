@@ -44,4 +44,4 @@ for i in range(int(4e3)):
         filepath = os.path.join(master_path,'lco25m', field.strip(), filename)
 
 #    # download spectrum
-    os.system("wget --user=sdss --password=2.5-meters " + filepath)
+    os.system("wget --user=<username> --password=<password> " + filepath)
