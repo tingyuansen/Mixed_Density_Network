@@ -16,10 +16,11 @@ df = pd.read_csv("Temp_APOGEE_IDs.txt")
 df = np.array(df).ravel()
 
 # loop over all spectra
-for i in range(df.shape):
+for i in range(df.size):
 
     # search for ID
-    ind = np.where(df[i] == catalog_id)
+    ind = np.where(df[i] == catalog_id)[0][0]
+
     # download spectra
     apogee_id = catalog_id[ind]
     field = catalog['FIELD'][ind]
