@@ -19,7 +19,7 @@ apogee_spectra = temp["apogee_spectra"].T
 apogee_spectra_err = temp["apogee_spectra_err"].T
 apogee_log_age = temp["log_age"]
 #apogee_id = temp["apogee_id"]
-apogee_payne_teff = temp["teff"]
+#apogee_payne_teff = temp["teff"]
 
 #-----------------------------------------------------------------------------
 # extract input and output arrays
