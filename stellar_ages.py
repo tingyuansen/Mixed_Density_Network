@@ -69,7 +69,7 @@ model.cuda()
 optimizer = optim.Adam(model.parameters(), lr=1e-4)
 
 # number of iterations to run
-n_iterations = 2000
+n_iterations = 500
 
 # batch size
 batch_size = 512
