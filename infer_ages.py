@@ -9,7 +9,7 @@ from torch.nn.parameter import Parameter
 
 
 # load models
-model = torch.load("../models.pt",  map_location=lambda storage, loc: storage) # load in cpu
+model = torch.load("models.pt",  map_location=lambda storage, loc: storage) # load in cpu
 model.eval()
 
 
@@ -74,6 +74,3 @@ y_error = np.array([y_normal_std[i,y_category_mode[i]] \
 
 print(y_pred.shape)
 np.savez("results.npz", y_pred = y_pred, y_error = y_error)
-
-
-

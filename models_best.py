@@ -1,5 +1,5 @@
 # code adapted from : https://github.com/tonyduan/mdn
-# MIT license 
+# MIT license
 # please cite accordingly
 
 import torch
