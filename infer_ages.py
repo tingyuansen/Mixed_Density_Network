@@ -51,12 +51,12 @@ batch_size = 10000
 num_batch = x_valid.shape[0]//batch_size
 print(num_batch)
 
-for i in range(num_batch):
+for i in range(num_batch+1):
     print(i)
     y_category_temp, y_normal = model(x_valid[i*batch_size:(i+1)*batch_size,:])
-    y_category.append(np.exp(y_category_temp._param.detach().numpy()))
-    y_normal_loc.append(y_normal.mean.detach().numpy()[:,:,0] -3.)
-    y_normal_std.append(y_normal.stddev.detach().numpy()[:,:,0])
+    y_category.extend(np.exp(y_category_temp._param.detach().numpy()))
+    y_normal_loc.extend(y_normal.mean.detach().numpy()[:,:,0] -3.)
+    y_normal_std.extend(y_normal.stddev.detach().numpy()[:,:,0])
 y_category = np.array(y_category)
 y_normal_loc = np.array(y_normal_loc)
 y_normal_std = np.array(y_normal_std)
